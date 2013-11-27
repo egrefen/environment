@@ -46,6 +46,10 @@ NeoBundle 'wikitopian/hardmode'
 NeoBundle 'Shougo/unite.vim'
 """"""""""""""""""""""""""""""""""""""""""""""
 
+NeoBundle 'scrooloose/nerdtree'
+
+NeoBundle 'msanders/snipmate.vim'
+
 syntax on
 filetype plugin indent on
 
