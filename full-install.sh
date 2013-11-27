@@ -1,4 +1,10 @@
 #!/bin/bash
+
+###################################
+## Environment install script     #
+## Copyright Ed Grefenstette 2013 #
+###################################
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $HOME
 
