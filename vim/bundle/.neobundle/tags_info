@@ -3,4 +3,5 @@ hardmode
 neobundle.vim
 unite.vim
 vim-airline
+vim-fugitive
 vimproc

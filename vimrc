@@ -12,6 +12,8 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 """"""""""""""""""""""""""""""""""""""""""""""
 
+NeoBundle 'tpope/vim-fugitive'
+
 """""""""" Airline: Vimscript powerline """"""
 NeoBundle 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
