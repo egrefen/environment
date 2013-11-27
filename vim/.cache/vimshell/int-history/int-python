@@ -1,0 +1,5 @@
+*Exit*
+exit()
+sys.exit()
+import sys
+ls

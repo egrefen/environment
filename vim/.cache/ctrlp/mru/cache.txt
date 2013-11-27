@@ -1,0 +1,2 @@
+/Users/Edward/.vimrc
+/Users/Edward/Developer/oxlm/cg/cg.cc

@@ -1,0 +1,9 @@
+:q
+echo 'Hello World'
+echo
+exit
+quit
+python
+pwd
+q
+ls
