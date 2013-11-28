@@ -15,9 +15,11 @@ echo 'Setting up vim environment'
 echo '=========================='
 echo ''
 
+#########################
+#### Setup vim config ###
+#########################
 for i in vimrc gvimrc vim; do 
 	
-	# vim env setup
 	dirpath=$DIR/$i
 	opath=$HOME'/.'$i
 
@@ -37,7 +39,12 @@ for i in vimrc gvimrc vim; do
 	echo '' # newline
 	ln -s $dirpath $opath
 done
+#########################
+#########################
 
+#########################
+### Install NeoBundle ###
+#########################
 if [ ! -e $HOME/.vim/bundle/neobundle.vim ]; then
 	echo 'NeoBundle not found. Installing NeoBundle.'
 	echo ''
@@ -46,3 +53,14 @@ if [ ! -e $HOME/.vim/bundle/neobundle.vim ]; then
 	echo 'NeoBundle installed.'
 	echo ''
 fi
+#########################
+#########################
+
+#########################
+### Install Powerline ###
+#########################
+powerlinepath=`pip list | grep -i powerline`
+if [ ! -z "$powerlinepath" ]; then 
+	pip install --user git+git://github.com/Lokaltog/powerline
+fi
+#########################
