@@ -75,6 +75,8 @@ echo '===================='
 echo '' # newline
 
 echo 'Add the following lines to ~/.profile or ~/.bashrc:'
+echo '' # newline
+
 echo '## POWERLINE settings'
 echo 'repo_root=/usr/local/lib/python2.7/site-packages'
 echo '. ${repo_root}/powerline/bindings/bash/powerline.sh'
