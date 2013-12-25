@@ -60,11 +60,11 @@ fi
 ### Install Powerline ###
 #########################
 
-echo 'Setting up powerline'
-echo '===================='
-echo '' # newline
 powerlinepath=`pip list | grep -i powerline`
 if [ ! -z "$powerlinepath" ]; then 
+	echo 'Setting up powerline'
+	echo '===================='
+	echo '' # newline
 	echo 'Installing powerline'
 	echo '' # newline
 	pip install --user git+git://github.com/Lokaltog/powerline
@@ -78,6 +78,6 @@ echo 'Add the following lines to ~/.profile or ~/.bashrc:'
 echo '' # newline
 
 echo '## POWERLINE settings'
-echo 'repo_root=/usr/local/lib/python2.7/site-packages'
+echo 'repo_root=/PATH/TO/PYTHON/site-packages'
 echo '. ${repo_root}/powerline/bindings/bash/powerline.sh'
 #########################
