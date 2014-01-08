@@ -50,6 +50,8 @@ NeoBundle 'scrooloose/nerdtree'
 
 NeoBundle 'msanders/snipmate.vim'
 
+NeoBundle 'majutsushi/tagbar'
+
 syntax on
 filetype plugin indent on
 
