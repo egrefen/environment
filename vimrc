@@ -31,6 +31,13 @@ set foldlevelstart=20
 set number
 nmap <Leader>r :set relativenumber!<CR>
 
+""""""""""""" Window movements """""""""""""""
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+""""""""""""""""""""""""""""""""""""""""""""""
+
 autocmd BufEnter * silent! lcd %:p:h
 
 """"""""""""""""""""""""""""""""""""""""""""""
@@ -54,6 +61,8 @@ NeoBundle 'tpope/vim-fugitive'
 """"""""""" Git Gutter """"""""""""""""""""
 " Git gutter for vim
 NeoBundle 'airblade/vim-gitgutter'
+let g:gitgutter_realtime = 1
+let g:gitgutter_eager = 1
 " Settings for cobalt colorscheme and dark terminal
 highlight SignColumn ctermbg=black
 highlight SignColumn guibg=#002F52
@@ -117,7 +126,7 @@ map <C-left> :bp<CR>
 map <C-right> :bn<CR>
 nnoremap <Leader>b :bp<CR>
 nnoremap <Leader>f :bn<CR>
-nnoremap <Leader>q :BW<CR>
+nnoremap <Leader>q :bw<CR>
 """"""""""""""""""""""""""""""""""""
 
 NeoBundleCheck
