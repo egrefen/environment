@@ -49,6 +49,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'scrooloose/nerdtree'
 
 NeoBundle 'msanders/snipmate.vim'
+let g:snippets_dir="~/.vim/snippets/,~/.vim/bundle/snipmate.vim/snippets"
 
 syntax on
 filetype plugin indent on
