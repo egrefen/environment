@@ -29,7 +29,6 @@ set foldmethod=syntax
 set foldlevelstart=20
 
 set number
-set relativenumber
 nmap <Leader>r :set relativenumber!<CR>
 
 autocmd BufEnter * silent! lcd %:p:h
