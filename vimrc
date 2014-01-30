@@ -122,11 +122,12 @@ NeoBundle 'Cpp11-Syntax-Support'
 
 """""""" Buffer stuff """"""""""""""
 NeoBundle 'fholgado/minibufexpl.vim'
+NeoBundle 'bufkill.vim'
 map <C-left> :bp<CR>
 map <C-right> :bn<CR>
 nnoremap <Leader>b :bp<CR>
 nnoremap <Leader>f :bn<CR>
-nnoremap <Leader>q :bw<CR>
+nnoremap <Leader>q :BW<CR>
 """"""""""""""""""""""""""""""""""""
 
 NeoBundleCheck
