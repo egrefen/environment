@@ -18,7 +18,7 @@ echo '' # newline
 #########################
 #### Setup vim config ###
 #########################
-for i in vimrc gvimrc vim; do
+for i in vimrc gvimrc vim tmux.conf; do
 
 	dirpath=$DIR/$i
 	opath=$HOME'/.'$i
