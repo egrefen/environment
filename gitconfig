@@ -1,5 +1,5 @@
 [core]
-	excludesfile = $HOME/.gitignore_global
+	excludesfile = /Users/Edward/.gitignore_global
 [user]
 	name = Edward Grefenstette
 	email = egrefen@gmail.com

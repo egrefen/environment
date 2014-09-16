@@ -1,0 +1,12 @@
+# For loop over vectors
+snippet forv
+	for (std::vector<${1}>::iterator ${3:i} = ${2}.begin(); ${3} != ${2}.end(); ++${3})
+	{
+		${4}
+	}
+
+snippet forcv
+	for (std::vector<${1}>::const_iterator ${3:i} = ${2}.cbegin(); ${3} != ${2}.cend(); ++${3})
+	{
+		${4}
+	}

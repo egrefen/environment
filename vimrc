@@ -110,7 +110,10 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 
-NeoBundle 'msanders/snipmate.vim'
+" New snipmate branch and dependencies
+NeoBundle 'MarcWeber/vim-addon-mw-utils'
+NeoBundle 'tlib'
+NeoBundle 'garbas/vim-snipmate'
 let g:snippets_dir="~/.vim/snippets/,~/.vim/bundle/snipmate.vim/snippets"
 
 NeoBundle 'majutsushi/tagbar'
@@ -122,13 +125,13 @@ NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'Cpp11-Syntax-Support'
 
 """""""" Buffer stuff """"""""""""""
-NeoBundle 'fholgado/minibufexpl.vim'
-NeoBundle 'bufkill.vim'
-map <C-left> :bp<CR>
-map <C-right> :bn<CR>
-nnoremap <Leader>b :bp<CR>
-nnoremap <Leader>f :bn<CR>
-nnoremap <Leader>q :BW<CR>
+"NeoBundle 'fholgado/minibufexpl.vim'
+"NeoBundle 'bufkill.vim'
+"map <C-left> :bp<CR>
+"map <C-right> :bn<CR>
+"nnoremap <Leader>b :bp<CR>
+"nnoremap <Leader>f :bn<CR>
+"nnoremap <Leader>q :BW<CR>
 """"""""""""""""""""""""""""""""""""
 
 NeoBundleCheck
