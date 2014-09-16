@@ -25,6 +25,9 @@ au InsertLeave * :let @/="" " Enable it back
 au GUIEnter * set vb t_vb=     " No GUI visual bell
 au VimEnter * set vb t_vb=     " No CLI visual bell
 
+" Automatically remove trailing whitespace from certain filetypes.
+autocmd FileType c,cpp,java,php,markdown,sh,python,tex autocmd BufWritePre <buffer> :%s/\s\+$//e
+
 set foldmethod=syntax
 set foldlevelstart=20
 
@@ -124,6 +127,8 @@ NeoBundle 'davidhalter/jedi-vim'
 
 NeoBundle 'Cpp11-Syntax-Support'
 
+NeoBundle 'laurentgoudet/vim-howdoi'
+
 """""""" Buffer stuff """"""""""""""
 "NeoBundle 'fholgado/minibufexpl.vim'
 "NeoBundle 'bufkill.vim'
@@ -132,7 +137,7 @@ NeoBundle 'Cpp11-Syntax-Support'
 "nnoremap <Leader>b :bp<CR>
 "nnoremap <Leader>f :bn<CR>
 "nnoremap <Leader>q :BW<CR>
-""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""
 
 NeoBundleCheck
 set laststatus=2

@@ -18,8 +18,8 @@ echo '' # newline
 #########################
 #### Setup vim config ###
 #########################
-for i in vimrc gvimrc vim; do 
-	
+for i in vimrc gvimrc vim tmux.conf; do
+
 	dirpath=$DIR/$i
 	opath=$HOME'/.'$i
 
@@ -61,7 +61,7 @@ fi
 #########################
 
 powerlinepath=`pip list | grep -i powerline`
-if [ ! -z "$powerlinepath" ]; then 
+if [ ! -z "$powerlinepath" ]; then
 	echo 'Setting up powerline'
 	echo '===================='
 	echo '' # newline
