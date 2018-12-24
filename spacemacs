@@ -225,7 +225,7 @@ values."
    dotspacemacs-fullscreen-at-startup nil
    ;; If non nil `spacemacs/toggle-fullscreen' will not use native fullscreen.
    ;; Use to disable fullscreen animations in OSX. (default nil)
-   dotspacemacs-fullscreen-use-non-native nil
+   dotspacemacs-fullscreen-use-non-native t
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
@@ -319,11 +319,15 @@ you should place your code here."
         '((nil :maxlevel . 3)
           (org-agenda-files :maxlevel . 3)))
 
-  ;;
-  (spacemacs/set-leader-keys "oor" '(lambda () (interactive) (find-file "~/org/refile.org")))
-  (spacemacs/set-leader-keys "ooi" '(lambda () (interactive) (find-file "~/org/inbox.org")))
-  (spacemacs/set-leader-keys "oow" '(lambda () (interactive) (find-file "~/org/work.org")))
-  (spacemacs/set-leader-keys "oop" '(lambda () (interactive) (find-file "~/org/personal.org")))
+  ;; Or mode opening shortcuts
+  (defun open-inbox-org () (interactive) (find-file "~/org/inbox.org"))
+  (spacemacs/set-leader-keys "ooi" 'open-inbox-org)
+  (defun open-personal-org () (interactive) (find-file "~/org/personal.org"))
+  (spacemacs/set-leader-keys "oop" 'open-personal-org)
+  (defun open-refile-org () (interactive) (find-file "~/org/refile.org"))
+  (spacemacs/set-leader-keys "oor" 'open-refile-org)
+  (defun open-work-org () (interactive) (find-file "~/org/work.org"))
+  (spacemacs/set-leader-keys "oow" 'open-work-org)
 
   ;; Enforce ordered property
   (setq org-enforce-todo-dependencies t)
