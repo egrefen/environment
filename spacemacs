@@ -325,7 +325,8 @@ you should place your code here."
   (spacemacs/set-leader-keys "oow" '(lambda () (interactive) (find-file "~/org/work.org")))
   (spacemacs/set-leader-keys "oop" '(lambda () (interactive) (find-file "~/org/personal.org")))
 
-
+  ;; Enforce ordered property
+  (setq org-enforce-todo-dependencies t)
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
   ;; Fix OS-X path stuff (e.g. for pdflatex from homebrew)
