@@ -314,6 +314,7 @@ you should place your code here."
   ;; Set up org agenda files
   (setq org-agenda-files
         '("~/org/inbox.org" "~/org/refile.org" "~/org/personal.org" "~/org/work.org"))
+  (setq org-default-notes-file "~/org/refile.org")
   ;; Org refile looks for top 3 header levels in current file and all agenda files.
   (setq org-refile-targets
         '((nil :maxlevel . 3)
