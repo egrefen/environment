@@ -319,6 +319,9 @@ you should place your code here."
         '((nil :maxlevel . 3)
           (org-agenda-files :maxlevel . 3)))
 
+  ;; Add Cmd-F fullscreen in graphics mode on mac
+  (when (and (spacemacs/system-is-mac) (display-graphic-p)) (global-set-key (kbd "H-f") 'spacemacs/toggle-frame-fullscreen))
+
   ;; Or mode opening shortcuts
   (defun open-inbox-org () (interactive) (find-file "~/org/inbox.org"))
   (spacemacs/set-leader-keys "ooi" 'open-inbox-org)
