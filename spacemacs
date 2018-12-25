@@ -323,7 +323,12 @@ you should place your code here."
   ;; Add Cmd-F fullscreen in graphics mode on mac
   (when (and (spacemacs/system-is-mac) (display-graphic-p)) (global-set-key (kbd "H-f") 'spacemacs/toggle-frame-fullscreen))
 
-  ;; Or mode opening shortcuts
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+  ;; User-friendly name for custom links
+  (spacemacs/declare-prefix "o" "custom-links")
+
+  ;; Org mode opening shortcuts
+  (spacemacs/declare-prefix "oo" "org-quick-open")
   (defun open-inbox-org () (interactive) (find-file "~/org/inbox.org"))
   (spacemacs/set-leader-keys "ooi" 'open-inbox-org)
   (defun open-personal-org () (interactive) (find-file "~/org/personal.org"))
@@ -332,6 +337,7 @@ you should place your code here."
   (spacemacs/set-leader-keys "oor" 'open-refile-org)
   (defun open-work-org () (interactive) (find-file "~/org/work.org"))
   (spacemacs/set-leader-keys "oow" 'open-work-org)
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
 
   ;; Enforce ordered property
   (setq org-enforce-todo-dependencies t)
