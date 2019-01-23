@@ -33,8 +33,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
-     ;; ----------------------------------------------------------------
+   '( ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
@@ -57,7 +56,7 @@ This function should only modify configuration layer settings."
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
-     )
+ )
 
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -459,15 +458,19 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  ;; Use right python interpreter
+  (setq python-shell-interpreter "/usr/local/anaconda3/bin/python")
+
+  ;; Use conda envs
+  (setenv "WORKON_HOME" "/usr/local/anaconda3/envs/")
 
   ;; Set up org agenda files
   (with-eval-after-load 'org
       (setq org-agenda-files
             '("~/org/inbox.org"
-              "~/org/refile.org"
               "~/org/personal.org"
               "~/org/work.org"))
-      (setq org-default-notes-file "~/org/refile.org")
+      (setq org-default-notes-file "~/org/inbox.org")
       ;; Org refile looks for top 3 header levels in current file and all agenda files.
       (setq org-refile-targets
             '((nil :maxlevel . 3)
@@ -488,8 +491,6 @@ you should place your code here."
   (spacemacs/set-leader-keys "ooi" 'open-inbox-org)
   (defun open-personal-org () (interactive) (find-file "~/org/personal.org"))
   (spacemacs/set-leader-keys "oop" 'open-personal-org)
-  (defun open-refile-org () (interactive) (find-file "~/org/refile.org"))
-  (spacemacs/set-leader-keys "oor" 'open-refile-org)
   (defun open-work-org () (interactive) (find-file "~/org/work.org"))
   (spacemacs/set-leader-keys "oow" 'open-work-org)
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
