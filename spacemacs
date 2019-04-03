@@ -47,7 +47,9 @@ This function should only modify configuration layer settings."
      ;; multiple-cursors
      neotree
      (org :variables org-want-todo-bindings t)
-     osx
+     (osx :variables
+          osx-option-as
+          'meta osx-right-option-as 'none)
      (shell :variables
             shell-default-shell 'eshell
             shell-default-height 30
